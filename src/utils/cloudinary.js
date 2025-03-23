@@ -8,12 +8,12 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-const uplaodOnCloudinary = async(localFilePath) => {
+const uploadOnCloudinary = async (localFilePath) => {
     try {
         if (!localFilePath) {
             return null
         }
-         // Upload file to Cloudinary
+        // Upload file to Cloudinary
         const response = await cloudinary.uploader.upload(localFilePath, {
             resource_type: "auto"
         })
@@ -34,3 +34,5 @@ const uplaodOnCloudinary = async(localFilePath) => {
 // cloudinary.v2.uploader.upload("https://upload.wikimedia.org/wikipedia.commons/a/ae/Olympic_flag.jpg", { public_id: "olympic_flag" }, function (error, result) {
 //     console.log(result);
 // });
+
+export { uploadOnCloudinary }

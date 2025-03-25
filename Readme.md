@@ -1,3 +1,3 @@
 # Learn Backend
 
-learn Backend form basics
+learn Backend from basics
